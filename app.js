@@ -1,7 +1,7 @@
 const simpleGit = require('simple-git'), git = simpleGit();
 module.exports = {
 	initialiseRepo: async (gitLink) => { return await git.init().then(() => git.addRemote(remoteName, gitLink)) },
-	syncGit: async (gitUsername, gitRepo, gitBranch, runningProcess = 'npm', localMainFilename = 'App.js', localBranchPath = '...') => {
+	syncGit: async (gitUsername, gitRepo, gitBranch = 'main', runningProcess = 'npm', localMainFilename = 'App.js', localBranchPath = '...') => {
 		const { spawnSync } = require('child_process'), gitLink = 'https://github.com/' + gitUsername + `/${gitRepo}.git`;
 		await git.cwd(localBranchPath);
 		await git.checkIsRepo().then(isRepo => !isRepo && module.exports.initialiseRepo(gitLink)).then(() => { try { git.fetch() } catch (err) { } });
