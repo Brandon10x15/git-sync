@@ -19,7 +19,11 @@ gitSync.syncGit(`gitUsername`, `gitRepo`, `gitBranch`, `LocalMainFilename`, `loc
 
 //gitSync.syncGit(`Brandon10x15`, `git-sync`, `Live`, `pm2`, `App.js`, `...`);
 
+
 Tips:
+
 Leaving runningProcess blank will automatically set the running process to 'npm', this is used to restart your App. Change to 'pm2' or 'forever' if you are using another.
+
 Leaving localMainFilename blank will automatically set the main app name to 'App.js', this is used to restart your App.
+
 Leaving localBranchPath blank will automatically use the current projects folder.
