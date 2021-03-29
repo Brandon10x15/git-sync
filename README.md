@@ -14,8 +14,8 @@ Node.js package built off of simple-git. Periodically auto-pull remote changes, 
 4. Usage:
 
 const gitSync = require('git-sync');
-gitSync.syncGit('gitUsername', 'gitRepo', 'gitBranch', 'LocalMainFilename', 'localBranchPath');
 
+gitSync.syncGit('gitUsername', 'gitRepo', 'gitBranch', 'LocalMainFilename', 'localBranchPath');
 
 //gitSync.syncGit('Brandon10x15', 'git-sync', 'Live', 'pm2', 'App.js', '...');
 
